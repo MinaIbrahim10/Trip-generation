@@ -51,63 +51,77 @@ This repository contains a set of models designed for various tasks related to t
 │
 ├── LICENSE
 └── README.md
+```
+## Models
 
-Models
-1. Trip Description Generation (T5-based)
+### 1. **Trip Description Generation (T5-based)**
 
-    Task: Generates a detailed trip description based on input location and type.
-    Model: T5-small (pretrained)
-    Metrics: BLEU: 0.71, ROUGE-1: 0.81, ROUGE-2: 0.76, ROUGE-L: 0.81
+- **Task**: Generates a detailed trip description based on input location and type.
+- **Model**: T5-small (pretrained)
+- **Metrics**: 
+  - BLEU: 0.71
+  - ROUGE-1: 0.81
+  - ROUGE-2: 0.76
+  - ROUGE-L: 0.81
 
-2. Location Classification
+### 2. **Location Classification**
 
-    Task: Classifies the location into one of three categories: Sharjah City, East Coast, and Central Region.
-    Model: Decision Tree Classifier
-    Metrics:
-        Accuracy: 97%
-        Precision (Sharjah City): 99%
-        Recall (East Coast): 99%
-        F1-Score (Central Region): 99%
+- **Task**: Classifies the location into one of three categories: Sharjah City, East Coast, and Central Region.
+- **Model**: Decision Tree Classifier
+- **Metrics**:
+  - Accuracy: 97%
+  - Precision (Sharjah City): 99%
+  - Recall (East Coast): 99%
+  - F1-Score (Central Region): 99%
 
-3. Rating Prediction
+### 3. **Rating Prediction**
 
-    Task: Predicts ratings for a trip based on the location, activity, and budget (low/medium/high).
-    Model: Random Forest Regressor
-    Metrics:
-        R²: 0.92
-        Mean Squared Error (MSE): 0.05
-        Mean Absolute Error (MAE): 0.04
-        Explained Variance Score: 0.92
+- **Task**: Predicts ratings for a trip based on the location, activity, and budget (low/medium/high).
+- **Model**: Random Forest Regressor
+- **Metrics**:
+  - R²: 0.92
+  - Mean Squared Error (MSE): 0.05
+  - Mean Absolute Error (MAE): 0.04
+  - Explained Variance Score: 0.92
 
-4. Intent Chatbot (BERT-based)
+### 4. **Intent Chatbot (BERT-based)**
 
-    Task: Identifies the user’s intent related to activities in Sharjah City.
-    Model: BERT-based architecture for intent classification
-    Metrics:
-        Accuracy: 99.45%
-        Loss: 0.0485
+- **Task**: Identifies the user’s intent related to activities in Sharjah City.
+- **Model**: BERT-based architecture for intent classification
+- **Metrics**:
+  - Accuracy: 99.45%
+  - Loss: 0.0485
 
-How to Use
-Prerequisites
+## How to Use
 
-    Python 3.x
-    Required Python Libraries: tensorflow, transformers, scikit-learn, nltk, pandas, rouge_score, keras
+### Prerequisites
 
-Step 1: Clone the repository
-git clone ttps://github.com/MinaIbrahim10/Trip-generation.git
+- Python 3.x
+- Required Python Libraries: tensorflow, transformers, scikit-learn, nltk, pandas, rouge_score, keras
+
+### Step 1: Clone the repository
+```bash
+git clone https://github.com/MinaIbrahim10/Trip-generation.git
 cd Trip-generation
-Step 2: Install the required libraries
+ ```
+
+Step 2: Install the required libraries and Make sure you have Python installed
+ ```bash
+python --version
+ 
 pip install -r requirements.txt
+   ```
 Step 3: Run the models
-
-Each folder (location_classification, trip_description, trip_rating, intents_chatbot
-
 For example, to use the Location Classification model, run:
+ ```bash
 python location_classification/scripts/locationclassifier.py
-Step 4: Follow the instructions in the notebooks to see how the models perform on sample datasets.
-Model Performance
+```
+Step 3: Follow the on-screen prompts to enter the trip details:
+    - description (string)
+The script will output a predicted  trip location.
+## Model Performance
 
-    Trip Description Generation (T5): Achieved a BLEU score of 0.71 and high ROUGE metrics (ROUGE-1: 0.81, ROUGE-2: 0.76).
+    Trip Description Generation (T5): Achieved a BLEU score of 0.71 and high ROUGE metrics (ROUGE-1: 0.81, ROUGE-2: 0.76,ROUGE-L: 0.81).
     Location Classification (Decision Tree): Achieved an accuracy of 97% on the test data.
     Rating Prediction (Random Forest): Achieved an R² score of 0.92 and excellent regression metrics.
     Intent Chatbot (BERT): Achieved an accuracy of 99.45% in intent classification with low loss.
