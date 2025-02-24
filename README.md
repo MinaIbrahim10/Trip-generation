@@ -128,9 +128,9 @@ The script will output a predicted  trip location.
     Rating Prediction (Random Forest): Achieved an R² score of 0.92 and excellent regression metrics.
     Intent Chatbot (BERT): Achieved an accuracy of 99.45% in intent classification with low loss.
 ## Contributors
-
-- **Mina Ibrahim**: Developer, model training, and deployment.
 - **Karam Ghazy** ([karam-ghazy](https://github.com/karam-ghazy)): Developer, model training, and deployment, with support in data preprocessing and feature engineering.
+- **Mina Ibrahim**: Developer, model training, and deployment.
+
 
 
 ## Future Work
