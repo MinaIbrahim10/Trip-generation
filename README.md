@@ -51,6 +51,7 @@ This repository contains a set of models designed for various tasks related to t
 │
 ├── LICENSE
 ├── CONTRIBUTORS.md
+├── requirements.txt
 └── README.md
 ```
 ## Models
