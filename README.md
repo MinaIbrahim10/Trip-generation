@@ -50,6 +50,7 @@ This repository contains a set of models designed for various tasks related to t
 │   │   └── IntentsChatbot.py
 │
 ├── LICENSE
+├── CONTRIBUTORS.md
 └── README.md
 ```
 ## Models
